@@ -1,15 +1,20 @@
 html,
 body {
-  padding: 5px 30px 5px 30px;
+  padding: 5px 50px 5px 50px;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+  font-size: 22px;
   /* background-color: tomato; */
 }
 
 a {
-  color: inherit;
+  color: #88939E;
   text-decoration: none;
+}
+
+a:hover {
+  color: #4C4C51;
 }
 
 * {

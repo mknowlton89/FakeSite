@@ -23,6 +23,9 @@ const TopNav = () => {
                 background-color: transparent;
                 font-size: 22px;
                 line-height: 28px;
+            }
+
+            a {
                 color: #EDEDED;
             }
 
@@ -40,24 +43,11 @@ const TopNav = () => {
                 padding: 0px 30px 0px 30px;
             }
 
-            .linkContainer p:hover {
-                cursor: pointer;
+            .account-image {
+                max-height: 50px;
+                border-radius: 50%;
+                border: 3px solid white;
             }
-
-            .linkContainer button {
-                padding: 0px 30px 0px 30px;
-                border: none;
-                border-radius: 5px;
-            }
-
-            .loginLink {
-                padding-left: 50px;
-            }
-                .account-image {
-                    max-height: 50px;
-                    border-radius: 50%;
-                    border: 3px solid white;
-                }
             `}</style>
         </nav>
     )

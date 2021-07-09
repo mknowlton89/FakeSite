@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
+import VideoTable from '../components/VideoTable'
+import TopNav from '../components/TopNav'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -15,7 +18,10 @@ export default function Home() {
       </Head>
 
       <main className='main'>
-        <Hero />
+        <TopNav />
+        {/* <Hero /> */}
+        <VideoTable />
+        <Footer />
       </main>
       <style jsx>{`
         .container {

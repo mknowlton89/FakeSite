@@ -11,21 +11,16 @@ const Hero = () => {
                 <button>Do Something Awesome</button>
             </div>
             <style jsx>{`
-                #hero-image {
-                    z-index: 0;
-                }
                 .hero {
-                    display: flex;
-                    flex-direction: row;
                     background: url('/hero-image.png') center;
                     opacity: 0.8;
+                    background-repeat: no-repeat;
                     background-size: cover;
-                    width: 100%;
-                    height: auto;
+                    width: 100vw;
                     min-height: 700px;
-                    position: absolute;
-                    top: 0px;
+                    position: relative;
                     z-index: -1;
+                    top: -292px;
                 }
                 .hero h1 {
                     font-size: 48px;
@@ -35,9 +30,14 @@ const Hero = () => {
 
                 }
                 .hero-text {
-                    width: 100%;
-                    align-self: center;
                     text-align: center;
+                    position: absolute;
+                    width: 100%;
+                    height: 700px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
                 .hero-text p {
                     font-size:22px;
