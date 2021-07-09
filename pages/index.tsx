@@ -19,11 +19,11 @@ export default function Home() {
 
       <main className='main'>
         <TopNav />
-        {/* <Hero /> */}
+        <Hero />
         <VideoTable />
         <Footer />
       </main>
-      <style jsx>{`
+      {/* <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -41,7 +41,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-      `}</style>
+      `}</style> */}
     </div>
   )
 }

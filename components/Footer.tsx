@@ -34,10 +34,12 @@ const Footer = () => {
         <style jsx>{`
 
           .footer {
-            width: 100%;
+            // width: 100%;
             height: 100px;
             display: flex;
             flex-direction: column;
+            padding-left: 80px;
+            padding-right: 80px;
           }
           .footer-quick-link-container {
             display: flex;

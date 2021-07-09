@@ -23,7 +23,7 @@ const VideoTable = () => {
                     align-items: center;
                     justify-content: space-between;
                     max-height: 300px;
-                    padding: 40px 0px;
+                    padding: 40px 80px;
                 }
                 .preview-image {
                     width: 400px;

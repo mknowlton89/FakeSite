@@ -19,7 +19,7 @@ const TopNav = () => {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                padding: 10px 20px 10px 20px;
+                padding: 20px 80px 20px 80px;
                 background-color: transparent;
                 font-size: 22px;
                 line-height: 28px;

@@ -20,7 +20,7 @@ const Hero = () => {
                     min-height: 700px;
                     position: relative;
                     z-index: -1;
-                    top: -292px;
+                    top: -101px;
                 }
                 .hero h1 {
                     font-size: 48px;
