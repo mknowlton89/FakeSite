@@ -23,6 +23,8 @@ const TopNav = () => {
                 background-color: transparent;
                 font-size: 22px;
                 line-height: 28px;
+                z-index: 50;
+                position: relative;
             }
 
             a {

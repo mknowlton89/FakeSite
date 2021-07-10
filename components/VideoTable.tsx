@@ -1,10 +1,21 @@
 import React from 'react'
 import { videos } from '../public/videos'
-import playbtn from '../public/playbtn.png'
+import Button from './Button'
+import { useRouter } from 'next/router'
+
+
 
 const VideoTable = () => {
 
-    const truncateString = (str, num) => {
+    const router = useRouter()
+
+
+    const handleBtnClick = () => {
+        // e.preventDefault();
+        alert("Click was called");
+    }
+
+    const truncateString = (str: string, num: number) => {
         if (str.length <= num) {
             return str
           }
@@ -19,13 +30,15 @@ const VideoTable = () => {
                         <div className="video-details">
                             <h2>{video.title}</h2>
                             <p>{truncateString(video.description.replace(/<[^>]*>?/gm, ''), 200)}</p>
-                            <button>Read More</button>
+                            <button type="button" onClick={() => router.push(`/video/${video.id}`)}>Watch Full Video</button>
 
                         </div>
-                        <div className="video-preview">
-                            <img className="preview-image" src={video.thumbnail_large} alt={video.title}/>
-                            <img className="overlay-icon" src={'/playbtn.png'} alt="play-button"/>
-                        </div>
+                        <a href={`/video/${video.id}`}>
+                            <div className="video-preview">
+                                    <img className="preview-image" src={video.thumbnail_large} alt={video.title}/>
+                                    <img className="overlay-icon" src={'/playbtn.png'} alt="play-button"/>
+                            </div>
+                        </a>
                     </div>
                 )
             })}
@@ -78,6 +91,9 @@ const VideoTable = () => {
                     color: #EDEDED;
                     font-size: 22px;
                     padding: 0px 20px;
+                }
+                button:hover {
+                    cursor: pointer;
                 }
                 `}</style>
         </div>
