@@ -1,19 +1,14 @@
 import React from 'react'
-import { videos } from '../public/videos'
-import Button from './Button'
 import { useRouter } from 'next/router'
+import { Video } from '../utils/types'
 
+  type Props = {
+    videos: Video[],
+  };
 
-
-const VideoTable = () => {
+export const VideoTable = ({videos}: Props) => {
 
     const router = useRouter()
-
-
-    const handleBtnClick = () => {
-        // e.preventDefault();
-        alert("Click was called");
-    }
 
     const truncateString = (str: string, num: number) => {
         if (str.length <= num) {
@@ -23,7 +18,7 @@ const VideoTable = () => {
     }
 
     return (
-        <div>
+        <div id="videos">
             {videos.map((video) => {
                 return (
                     <div className="video-card-container">
@@ -95,9 +90,12 @@ const VideoTable = () => {
                 button:hover {
                     cursor: pointer;
                 }
+                @media only screen and (max-width: 1100px) {
+                    .video-card-container {
+                        flex-direction: column-reverse;
+                    }
+                  }
                 `}</style>
         </div>
     )
 }
-
-export default VideoTable

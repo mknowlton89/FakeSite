@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
-import VideoTable from '../components/VideoTable'
+import { VideoTable } from '../components/VideoTable'
 import TopNav from '../components/TopNav'
 import Footer from '../components/Footer'
+import { Video } from '../utils/types'
 
-export default function Home() {
+type Props = {
+  videos: Video[],
+};
+
+export default function Home({videos}: Props) {
   return (
     <div className='container'>
       <Head>
@@ -20,7 +25,7 @@ export default function Home() {
       <main className='main'>
         <TopNav />
         <Hero />
-        <VideoTable />
+        <VideoTable videos={videos}/>
         <Footer />
       </main>
       {/* <style jsx>{`
@@ -44,4 +49,17 @@ export default function Home() {
       `}</style> */}
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+
+  const res = await fetch('https://vimeo.com/api/v2/channel/staffpicks/videos.json')
+
+  const videos = await res.json();
+
+  return {
+      props: {
+          videos
+      }
+  }
 }

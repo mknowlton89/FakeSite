@@ -2,14 +2,13 @@ import React from 'react'
 
 type Props = {
     onClick: any,
-    text?: string,
-    href?: string,
+    text?: string
   };
 
-const Button = ({onClick, href, text = "Learn More"}: Props) => {
+const Button = ({onClick, text = "Learn More"}: Props) => {
     return (
         <>
-            <button href={href} onClick={onClick}>{text}</button>
+            <button onClick={onClick}>{text}</button>
 
             <style jsx>{`
                 button {
