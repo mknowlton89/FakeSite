@@ -3,16 +3,26 @@ import { useEffect, useState } from 'react'
 
 const TopNav = () => {
 
-    useEffect(() => {
+    const [navState, setNavState] = useState('closed');
 
-        const menu_btn = document.querySelector('.hamburger');
-        const mobile_nav = document.querySelector('.mobile-nav');
+    const handleNavClick = () => {
+        if (navState === "closed"){
+            setNavState('is-active');
+        } else {
+            setNavState('closed');
+        }
+    }
 
-        menu_btn.addEventListener('click', function () {
-            menu_btn.classList.toggle('is-active');
-            mobile_nav.classList.toggle('is-active');
-        });
-    });
+    // useEffect(() => {
+
+    //     const menu_btn = document.querySelector('.hamburger');
+    //     const mobile_nav = document.querySelector('.mobile-nav');
+
+    //     menu_btn.addEventListener('click', function () {
+    //         menu_btn.classList.toggle('is-active');
+    //         mobile_nav.classList.toggle('is-active');
+    //     });
+    // });
 
     return (
         <nav className='nav'>
@@ -29,10 +39,10 @@ const TopNav = () => {
                 </a>
             </div>
             <div className='mobile-linkContainer'>
-                <button className="hamburger">
+                <button onClick={handleNavClick} className={`hamburger ${navState}`}>
                         <div className="bar"></div>
                 </button>
-                <nav className="mobile-nav">
+                <nav className={`mobile-nav ${navState}`}>
                 <a href="#">Account</a>
                 <a href="#">Help</a>
             </nav>
