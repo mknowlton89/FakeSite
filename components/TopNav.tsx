@@ -4,7 +4,9 @@ const TopNav = () => {
     return (
         <nav className='nav'>
             <div>
-                <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
+                <a href="/">
+                    <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
+                </a>
             </div>
             <div className='linkContainer'>
                 <a href="#">Account</a>

@@ -95,6 +95,11 @@ export const VideoTable = ({videos}: Props) => {
                         flex-direction: column-reverse;
                     }
                   }
+                  @media only screen and (max-width: 1100px) {
+                    .video-card-container {
+                        flex-direction: column-reverse;
+                    }
+                  }
                 `}</style>
         </div>
     )
