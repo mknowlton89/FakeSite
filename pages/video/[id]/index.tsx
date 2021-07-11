@@ -13,6 +13,13 @@ const videoPage = () => {
     const router = useRouter()
     let videoId: any = router.query.id
 
+    const getURLSource = () => {
+        // alert("Get URL Source was called")
+        let urlArray = videoData.uri.split('/')
+        console.log(urlArray);
+        return `https://player.vimeo.com/video/${urlArray[2]}`;
+    }
+
     useEffect(() => {
         if (videoId) {
             api.getVideoDetailsById(videoId.toString())
@@ -43,7 +50,8 @@ const videoPage = () => {
                     <>
                     <VideoHero title={videoData.name}/>
                     <div id="video-wrapper">
-                        <iframe className="iframe-container" src="https://player.vimeo.com/video/292893585?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=219612" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="The Phantom 52 starring Tom Skerritt"></iframe>
+                        <iframe className="i-frame-container" src={getURLSource()} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
+                        {/* <iframe src="https://player.vimeo.com/video/568430412" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Aerial Sheep Herding in Yokneam"></iframe> */}
                         <p>{videoData.description.replace(/<[^>]*>?/gm, '')}</p>
                     </div>
                     </>}
