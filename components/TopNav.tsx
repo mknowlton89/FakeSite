@@ -16,7 +16,7 @@ const TopNav = () => {
 
     return (
         <nav className='nav'>
-            <div>
+            <div className="logo-container">
                 <Link href="/">
                     <Image src="/logo.png" alt="Vercel Logo" width={50} height={50}/>
                 </Link>
@@ -29,13 +29,9 @@ const TopNav = () => {
                 </Link>
             </div>
             <div className='mobile-linkContainer'>
-                <button onClick={handleNavClick} className={`hamburger ${navState}`}>
-                        <div className="bar"></div>
-                </button>
-                <nav className={`mobile-nav ${navState}`}>
+                <Link href="/"><a>Home</a></Link>
                 <Link href="#"><a>Account</a></Link>
                 <Link href="#"><a>Help</a></Link>
-            </nav>
             </div>
             <style jsx>{`
             .nav {
@@ -145,6 +141,15 @@ const TopNav = () => {
               }
               @media only screen and (max-width: 600px) {
                 .linkContainer {
+                    display: none;
+                }
+                .nav {
+                    flex-direction: column;
+                }
+                .mobile-linkContainer {
+                    padding-top: 20px;
+                }
+                .logo-container {
                     display: none;
                 }
               }
