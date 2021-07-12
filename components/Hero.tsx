@@ -8,7 +8,7 @@ const Hero = () => {
     return (
         <div className='hero'>
             <div className='hero-text'>
-                <h1>Vimeo's Top Charts</h1>
+                <h1>Vimeo&apos;s Top Charts</h1>
                 <p>Want to be the wokest bro in your squad? Check out which videos are hot and which videos are not. #WokeFam</p>
                 <button type="button" onClick={() => router.push('#videos')}>Browse Top Videos</button>
             </div>
