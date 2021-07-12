@@ -14,7 +14,7 @@ const Hero = () => {
             </div>
             <style jsx>{`
                 .hero h1 {
-                    font-size: 48px;
+                    // font-size: 48px;
                     line-height: 48px;
                     color: #fff;
                     font-weight: 300;
@@ -34,7 +34,7 @@ const Hero = () => {
                     padding: 0px 80px;
                 }
                 .hero-text p {
-                    font-size:22px;
+                    // font-size:22px;
                     line-height: 28px;
                     color: #EDEDED;
                 }
@@ -44,7 +44,7 @@ const Hero = () => {
                     min-height: 55px;
                     border-radius: 30px;
                     color: #EDEDED;
-                    font-size: 22px;
+                    // font-size: 22px;
                     padding: 0px 20px;
                     z-index: 30;
                 }

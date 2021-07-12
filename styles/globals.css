@@ -19,6 +19,14 @@ a:hover {
   color: #4C4C51;
 }
 
+h1 {
+  font-size:48px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
 /* * {
   outline: 1px solid #f00 !important;
 } */
@@ -26,4 +34,16 @@ a:hover {
 /* * {
   box-sizing: border-box;
 } */
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+}
 

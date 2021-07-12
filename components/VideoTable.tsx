@@ -85,7 +85,7 @@ export const VideoTable = ({videos}: Props) => {
                     min-height: 55px;
                     border-radius: 30px;
                     color: #EDEDED;
-                    font-size: 22px;
+                    // font-size: 22px;
                     padding: 0px 20px;
                 }
                 button:hover {

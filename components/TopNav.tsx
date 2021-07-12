@@ -45,7 +45,7 @@ const TopNav = () => {
                 justify-content: space-between;
                 padding: 20px 80px 20px 80px;
                 background-color: transparent;
-                font-size: 22px;
+                // font-size: 22px;
                 line-height: 28px;
                 z-index: 50;
                 position: relative;
@@ -57,7 +57,7 @@ const TopNav = () => {
             }
 
             .nav h1 {
-                font-size: 25px;
+                // font-size: 25px;
             }
 
             .linkContainer {
@@ -125,7 +125,7 @@ const TopNav = () => {
                 left: 0%;
                 padding-top: 100px;
                 padding-bottom: 100px;
-                font-size: 30px;
+                // font-size: 30px;
             }
             .mobile-nav a {
                 display: block;

@@ -35,7 +35,7 @@ const VideoHero = ({ title }: Props) => {
                     top: -101px;
                 }
                 .video-hero-text p {
-                    font-size:22px;
+                    // font-size:22px;
                     line-height: 28px;
                     color: #EDEDED;
                 }
