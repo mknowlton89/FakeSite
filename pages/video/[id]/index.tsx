@@ -72,7 +72,7 @@ const videoPage = () => {
                     <>
                     <VideoHero title={videoData.name}/>
                     <div id="video-wrapper">
-                        <iframe className="i-frame-container" src={getURLSource()} width={videoWidth} height={videoHeight} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
+                        <iframe className="i-frame-container" src={getURLSource()} width={videoWidth} height={videoHeight} allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
                         <p>{videoData.description.replace(/<[^>]*>?/gm, '')}</p>
                     </div>
                     </>}
