@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import heroImage from '../public/hero-image.png'
-import Button from './Button'
 import { useRouter } from 'next/router'
 
 const Hero = () => {
@@ -55,16 +52,6 @@ const Hero = () => {
                 button:hover {
                     cursor: pointer;
                 }
-                // @media only screen and (max-width: 600px) {
-                //     .hero-text {
-                //         width: 160vw;
-                //     }
-                //   }
-                //   @media only screen and (max-width: 437px) {
-                //     .hero-text {
-                //         width: 160vw;
-                //     }
-                //   }
             `}</style>
         </div>
     )

@@ -28,25 +28,6 @@ export default function Home({videos}: Props) {
         <VideoTable videos={videos}/>
         <Footer />
       </main>
-      {/* <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-        }
-        .main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-      `}</style> */}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const TopNav = () => {
 
@@ -12,17 +12,6 @@ const TopNav = () => {
             setNavState('closed');
         }
     }
-
-    // useEffect(() => {
-
-    //     const menu_btn = document.querySelector('.hamburger');
-    //     const mobile_nav = document.querySelector('.mobile-nav');
-
-    //     menu_btn.addEventListener('click', function () {
-    //         menu_btn.classList.toggle('is-active');
-    //         mobile_nav.classList.toggle('is-active');
-    //     });
-    // });
 
     return (
         <nav className='nav'>

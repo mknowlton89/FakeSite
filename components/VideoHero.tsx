@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import heroImage from '../public/hero-image.png'
-import Button from './Button'
 import { useRouter } from 'next/router'
 
 type Props = {
@@ -43,16 +40,6 @@ const VideoHero = ({ title }: Props) => {
                     line-height: 28px;
                     color: #EDEDED;
                 }
-                // @media only screen and (max-width: 600px) {
-                //     .video-hero-text {
-                //         width: 160vw;
-                //     }
-                //   }
-                //   @media only screen and (max-width: 437px) {
-                //     .video-hero-text {
-                //         width: 160vw;
-                //     }
-                //   }
             `}</style>
         </div>
     )

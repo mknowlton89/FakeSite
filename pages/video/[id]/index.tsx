@@ -24,32 +24,6 @@ const videoPage = () => {
         return `https://player.vimeo.com/video/${urlArray[2]}`;
     }
 
-    // const calculateWidth = () => {
-    //     let screenWidth = size.width
-    //     let videoWidth = videoData.width
-
-    //     if (screenWidth){
-    //         if (screenWidth > videoWidth){
-    //             return videoWidth
-    //         } else {
-    //             videoWidth = screenWidth * .8
-    //             return videoWidth;
-    //         }
-    //     }
-    // }
-
-    // const calculateHeight = () => {
-    //     // let screenHeight = size.height
-    //     // We need to calculate the aspect ratio of the video
-    //     if (videoWidth) {
-    //         const videoAspectRatio = videoData.width / videoData.height
-
-    //         let videoHeight = videoWidth / videoAspectRatio;
-
-    //         return videoHeight;
-    //     }
-
-
     const calculateVideoSize = () => {
 
         if (size.width && videoData){
@@ -77,10 +51,6 @@ const videoPage = () => {
             calculateVideoSize()
         }
     }, [size, videoData, videoWidth])
-
-    console.log(videoData)
-
-
 
     return (
         <div>
