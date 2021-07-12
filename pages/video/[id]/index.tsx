@@ -106,4 +106,22 @@ const VideoPage = () => {
     )
 }
 
+export const getStaticPaths = async () => {
+
+    const res = await fetch('https://vimeo.com/api/v2/channel/staffpicks/videos.json')
+
+    const videos = await res.json();
+
+    const ids = videos.map(video => video.id)
+
+    const paths = ids.map(id => ({params: {id: id.toString()}}))
+
+    return {
+        paths: {
+            paths,
+            fallback: false
+        }
+    }
+  }
+
 export default VideoPage
