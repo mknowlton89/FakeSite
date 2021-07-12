@@ -46,27 +46,33 @@ export const VideoTable = ({videos}: Props) => {
                     justify-content: space-between;
                     padding: 40px 80px;
                 }
+
                 .video-card-container h2 {
                     font-size: 36px;
                     line-height: 36px;
                     color: #4c4c51;
                 }
+
                 .video-details {
                     padding: 20px;
                 }
+
                 .preview-image {
                     width: 600px;
                 }
+
                 .overlay-icon {
                     position: absolute;
                     top: 34%;
                     left: 43%;
                     z-index: 30;
                 }
+
                 .video-preview {
                     position: relative;
                     background: playbtn;
                 }
+
                 .video-preview::after {
                     content: '';
                     position: absolute;
@@ -76,9 +82,11 @@ export const VideoTable = ({videos}: Props) => {
                     background-image: linear-gradient(to bottom, #EE2E1D, #FFB1B5);
                     opacity: .7;
                 }
+
                 .video-preview:hover {
                     cursor: pointer;
                 }
+
                 button {
                     border: none;
                     background-color: #EE2D1C;
@@ -88,15 +96,18 @@ export const VideoTable = ({videos}: Props) => {
                     // font-size: 22px;
                     padding: 0px 20px;
                 }
+
                 button:hover {
                     cursor: pointer;
                 }
+
                 @media only screen and (max-width: 1100px) {
                     .video-card-container {
                         flex-direction: column-reverse;
                     }
                   }
-                  @media only screen and (max-width: 1100px) {
+
+                @media only screen and (max-width: 1100px) {
                     .video-card-container {
                         flex-direction: column-reverse;
                     }

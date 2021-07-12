@@ -41,6 +41,7 @@ const Footer = () => {
             padding-left: 80px;
             padding-right: 80px;
           }
+
           .footer-quick-link-container {
             display: flex;
             flex-direction: row;
@@ -48,45 +49,50 @@ const Footer = () => {
             border-bottom: 1px solid #eaeaea;
             padding-bottom: 80px;
           }
+
           .footer-quick-links {
             display: flex;
             flex-direction: column;
           }
+
           .footer-legal {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-bottom: 15px;
           }
+
           h4 {
             padding-right: 120px;
             color: #EE2D1C;
           }
+
           .footer-legal a {
             padding-left: 20px;
           }
+
           @media only screen and (max-width: 700px) {
-                    .footer-quick-link-container {
-                         flex-direction: column;
-                         align-items: center;
-                         text-align: center;
-                    }
-                    .footer-quick-links h4{
-                      padding-right: 0px;
-                    }
-                    .footer-legal {
-                        flex-direction: column-reverse;
-                        align-items: center;
-                    }
-                    .footer-legal a {
-                      padding: 0px 10px 0px 10px;
-                      margin-bottom: 10px;
-                      text-align: center;
-                    }
-                    .footer-logo-container {
-                      padding-top: 20px;
-                    }
-                   }
+              .footer-quick-link-container {
+                  flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+              }
+              .footer-quick-links h4{
+                  padding-right: 0px;
+              }
+              .footer-legal {
+                  flex-direction: column-reverse;
+                  align-items: center;
+              }
+              .footer-legal a {
+                  padding: 0px 10px 0px 10px;
+                  margin-bottom: 10px;
+                  text-align: center;
+              }
+              .footer-logo-container {
+                  padding-top: 20px;
+              }
+          }
         }`}</style>
       </footer>
     )

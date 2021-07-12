@@ -41,7 +41,6 @@ const TopNav = () => {
                 justify-content: space-between;
                 padding: 20px 80px 20px 80px;
                 background-color: transparent;
-                // font-size: 22px;
                 line-height: 28px;
                 z-index: 50;
                 position: relative;
@@ -50,10 +49,6 @@ const TopNav = () => {
             a {
                 color: #EDEDED;
                 padding: 0px 30px 0px 30px;
-            }
-
-            .nav h1 {
-                // font-size: 25px;
             }
 
             .linkContainer {
@@ -68,6 +63,7 @@ const TopNav = () => {
                 border: 3px solid white;
                 z-index: 100;
             }
+
             .hamburger {
                 position: relative;
                 display: block;
@@ -79,6 +75,7 @@ const TopNav = () => {
                 border: none;
                 z-index: 100;
             }
+
             .hamburger .bar, .hamburger::after, .hamburger::before {
                 content: '';
                 display: block;
@@ -88,15 +85,19 @@ const TopNav = () => {
                 margin: 6px 0px;
                 transition: 0.3s;
             }
+
             .hamburger.is-active::before {
                 transform: rotate(-45deg) translate(-9px, 6px);
             }
+
             .hamburger.is-active .bar {
                 opacity: 0;
             }
+
             .hamburger.is-active::after {
                 transform: rotate(45deg) translate(-9px, -6px);
             }
+
             .mobile-nav {
                 display: flex;
                 flex-direction: column;
@@ -104,7 +105,6 @@ const TopNav = () => {
                 position: fixed;
                 top: 0;
                 left: 100%;
-                /* width: 100%; */
                 min-height: fit-content;
                 align-content: space-around;
                 z-index: 98;
@@ -113,6 +113,7 @@ const TopNav = () => {
                 padding-bottom: 8%;
                 transition: 0.3s;
             }
+
             .mobile-nav.is-active {
                 height: fit-content;
                 width: 121vw;
@@ -121,8 +122,8 @@ const TopNav = () => {
                 left: 0%;
                 padding-top: 100px;
                 padding-bottom: 100px;
-                // font-size: 30px;
             }
+
             .mobile-nav a {
                 display: block;
                 text-align: center;
@@ -131,15 +132,18 @@ const TopNav = () => {
                 text-decoration: none;
                 color: black;
             }
+
             nav img {
                 z-index: 100;
             }
+
             @media only screen and (min-width: 600px) {
                 .mobile-linkContainer {
                     display: none;
                 }
               }
-              @media only screen and (max-width: 600px) {
+
+            @media only screen and (max-width: 600px) {
                 .linkContainer {
                     display: none;
                 }

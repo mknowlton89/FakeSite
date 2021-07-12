@@ -26,6 +26,7 @@ const Hero = ({headline, subhead, button, height}:Props) => {
                     color: #fff;
                     font-weight: 300;
                 }
+                
                 .hero-text {
                     background: url('/hero-image.png') center;
                     background-repeat: no-repeat;
@@ -40,21 +41,22 @@ const Hero = ({headline, subhead, button, height}:Props) => {
                     top: -101px;
                     padding: 0px 80px;
                 }
+
                 .hero-text p {
-                    // font-size:22px;
                     line-height: 28px;
                     color: #EDEDED;
                 }
+
                 button {
                     border: none;
                     background-color: #EE2D1C;
                     min-height: 55px;
                     border-radius: 30px;
                     color: #EDEDED;
-                    // font-size: 22px;
                     padding: 0px 20px;
                     z-index: 30;
                 }
+
                 button:hover {
                     cursor: pointer;
                 }
