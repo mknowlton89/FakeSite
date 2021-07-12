@@ -22,8 +22,8 @@ const TopNav = () => {
                 </Link>
             </div>
             <div className='linkContainer'>
-                <Link href="#">Account</Link>
-                <Link href="#">Help</Link>
+                <Link href="#"><a>Account</a></Link>
+                <Link href="#"><a>Help</a></Link>
                 <Link href="#">
                     <img className="account-image" src='/headshot-square.jpg' alt="mk-headshot"></img>
                 </Link>
@@ -51,8 +51,9 @@ const TopNav = () => {
                 position: relative;
             }
 
-            Link {
+            a {
                 color: #EDEDED;
+                padding: 0px 30px 0px 30px;
             }
 
             .nav h1 {
@@ -63,10 +64,6 @@ const TopNav = () => {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-            }
-
-            .linkContainer Link {
-                padding: 0px 30px 0px 30px;
             }
 
             .account-image {
@@ -128,7 +125,7 @@ const TopNav = () => {
                 padding-top: 100px;
                 padding-bottom: 100px;
             }
-            .mobile-nav Link {
+            .mobile-nav a {
                 display: block;
                 text-align: center;
                 margin-bottom: 16px;

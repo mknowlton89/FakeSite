@@ -7,17 +7,17 @@ const Footer = () => {
           <div className="footer-quick-link-container">
             <div className="footer-quick-links">
               <h4>FakeSite</h4>
-              <Link href="#">Linkbout Us</Link>
-              <Link href="#">Press</Link>
-              <Link href="#">Policies</Link>
-              <Link href="#">Help</Link>
+              <Link href="#"><a>About Us</a></Link>
+              <Link href="#"><a>Press</a></Link>
+              <Link href="#"><a>Policies</a></Link>
+              <Link href="#"><a>Help</a></Link>
             </div>
             <div className="footer-quick-links">
               <h4>Account</h4>
-              <Link href="#">Edit Profile</Link>
-              <Link href="#">Friends</Link>
-              <Link href="#">SociLinkl</Link>
-              <Link href="#">Delete Profile</Link>
+              <Link href="#"><a>Edit Profile</a></Link>
+              <Link href="#"><a>Friends</a></Link>
+              <Link href="#"><a>Social</a></Link>
+              <Link href="#"><a>Delete Profile</a></Link>
             </div>
           </div>
 
@@ -27,9 +27,9 @@ const Footer = () => {
               <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
             </div>
             <div>
-              <Link href="#">Terms</Link>
-              <Link href="#">PrivLinkcy</Link>
-              <Link href="#">Site Map</Link>
+              <Link href="#"><a>Terms</a></Link>
+              <Link href="#"><a>Privacy</a></Link>
+              <Link href="#"><a>Site Map</a></Link>
             </div>
           </div>
         <style jsx>{`
@@ -62,7 +62,7 @@ const Footer = () => {
             padding-right: 120px;
             color: #EE2D1C;
           }
-          .footer-legal Link {
+          .footer-legal a {
             padding-left: 20px;
           }
           @media only screen and (max-width: 700px) {
@@ -78,7 +78,7 @@ const Footer = () => {
                         flex-direction: column-reverse;
                         align-items: center;
                     }
-                    .footer-legal Link {
+                    .footer-legal a {
                       padding: 0px 10px 0px 10px;
                       margin-bottom: 10px;
                       text-align: center;
