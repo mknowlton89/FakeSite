@@ -1,4 +1,4 @@
-import TopNav from './TopNav.tsx'
+import TopNav from './TopNav'
 import Footer from './Footer'
 
 export const Layout = ({children}) => {
