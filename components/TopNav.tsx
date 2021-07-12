@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 const TopNav = () => {
@@ -16,24 +17,24 @@ const TopNav = () => {
     return (
         <nav className='nav'>
             <div>
-                <a href="/">
+                <Link href="/">
                     <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
-                </a>
+                </Link>
             </div>
             <div className='linkContainer'>
-                <a href="#">Account</a>
-                <a href="#">Help</a>
-                <a href="#">
+                <Link href="#">Account</Link>
+                <Link href="#">Help</Link>
+                <Link href="#">
                     <img className="account-image" src='/headshot-square.jpg' alt="mk-headshot"></img>
-                </a>
+                </Link>
             </div>
             <div className='mobile-linkContainer'>
                 <button onClick={handleNavClick} className={`hamburger ${navState}`}>
                         <div className="bar"></div>
                 </button>
                 <nav className={`mobile-nav ${navState}`}>
-                <a href="#">Account</a>
-                <a href="#">Help</a>
+                <Link href="#">Linkccount</Link>
+                <Link href="#">Help</Link>
             </nav>
             </div>
             <style jsx>{`
@@ -50,7 +51,7 @@ const TopNav = () => {
                 position: relative;
             }
 
-            a {
+            Link {
                 color: #EDEDED;
             }
 
@@ -64,7 +65,7 @@ const TopNav = () => {
                 align-items: center;
             }
 
-            .linkContainer a {
+            .linkContainer Link {
                 padding: 0px 30px 0px 30px;
             }
 
@@ -127,7 +128,7 @@ const TopNav = () => {
                 padding-top: 100px;
                 padding-bottom: 100px;
             }
-            .mobile-nav a {
+            .mobile-nav Link {
                 display: block;
                 text-align: center;
                 margin-bottom: 16px;

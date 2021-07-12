@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Video } from '../utils/types'
+import Link from 'next/link'
 
   type Props = {
     videos: Video[],
@@ -21,19 +22,19 @@ export const VideoTable = ({videos}: Props) => {
         <div id="videos">
             {videos.map((video) => {
                 return (
-                    <div className="video-card-container">
+                    <div className="video-card-container" key={video.id}>
                         <div className="video-details">
                             <h2>{video.title}</h2>
                             <p>{truncateString(video.description.replace(/<[^>]*>?/gm, ''), 200)}</p>
                             <button type="button" onClick={() => router.push(`/video/${video.id}`)}>Watch Full Video</button>
 
                         </div>
-                        <a href={`/video/${video.id}`}>
+                        <Link href={`/video/${video.id}`}>
                             <div className="video-preview">
                                     <img className="preview-image" src={video.thumbnail_large} alt={video.title}/>
                                     <img className="overlay-icon" src={'/playbtn.png'} alt="play-button"/>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 )
             })}

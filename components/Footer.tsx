@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -6,17 +7,17 @@ const Footer = () => {
           <div className="footer-quick-link-container">
             <div className="footer-quick-links">
               <h4>FakeSite</h4>
-              <a href="#">About Us</a>
-              <a href="#">Press</a>
-              <a href="#">Policies</a>
-              <a href="#">Help</a>
+              <Link href="#">Linkbout Us</Link>
+              <Link href="#">Press</Link>
+              <Link href="#">Policies</Link>
+              <Link href="#">Help</Link>
             </div>
             <div className="footer-quick-links">
               <h4>Account</h4>
-              <a href="#">Edit Profile</a>
-              <a href="#">Friends</a>
-              <a href="#">Social</a>
-              <a href="#">Delete Profile</a>
+              <Link href="#">Edit Profile</Link>
+              <Link href="#">Friends</Link>
+              <Link href="#">SociLinkl</Link>
+              <Link href="#">Delete Profile</Link>
             </div>
           </div>
 
@@ -26,15 +27,14 @@ const Footer = () => {
               <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
             </div>
             <div>
-              <a href="#">Terms</a>
-              <a href="#">Privacy</a>
-              <a href="#">Site Map</a>
+              <Link href="#">Terms</Link>
+              <Link href="#">PrivLinkcy</Link>
+              <Link href="#">Site Map</Link>
             </div>
           </div>
         <style jsx>{`
 
           .footer {
-            // width: 100%;
             height: 100px;
             display: flex;
             flex-direction: column;
@@ -62,7 +62,7 @@ const Footer = () => {
             padding-right: 120px;
             color: #EE2D1C;
           }
-          .footer-legal a {
+          .footer-legal Link {
             padding-left: 20px;
           }
           @media only screen and (max-width: 700px) {
@@ -78,7 +78,7 @@ const Footer = () => {
                         flex-direction: column-reverse;
                         align-items: center;
                     }
-                    .footer-legal a {
+                    .footer-legal Link {
                       padding: 0px 10px 0px 10px;
                       margin-bottom: 10px;
                       text-align: center;
