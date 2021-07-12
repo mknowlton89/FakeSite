@@ -25,7 +25,6 @@ const Hero = () => {
                     background-size: cover;
                     text-align: center;
                     position: relative;
-                    // width: 100vw;
                     height: 700px;
                     display: flex;
                     flex-direction: column;

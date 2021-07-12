@@ -27,7 +27,6 @@ const VideoHero = ({ title }: Props) => {
                     background-size: cover;
                     text-align: center;
                     position: relative;
-                    // width: 100vw;
                     height: 400px;
                     display: flex;
                     flex-direction: column;

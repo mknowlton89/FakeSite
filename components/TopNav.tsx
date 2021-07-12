@@ -18,7 +18,7 @@ const TopNav = () => {
         <nav className='nav'>
             <div>
                 <Link href="/">
-                    <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
+                    <Image src="/logo.png" alt="Vercel Logo" width={50} height={50}/>
                 </Link>
             </div>
             <div className='linkContainer'>
@@ -33,8 +33,8 @@ const TopNav = () => {
                         <div className="bar"></div>
                 </button>
                 <nav className={`mobile-nav ${navState}`}>
-                <Link href="#">Linkccount</Link>
-                <Link href="#">Help</Link>
+                <Link href="#"><a>Account</a></Link>
+                <Link href="#"><a>Help</a></Link>
             </nav>
             </div>
             <style jsx>{`
@@ -70,11 +70,12 @@ const TopNav = () => {
                 max-height: 50px;
                 border-radius: 50%;
                 border: 3px solid white;
+                z-index: 100;
             }
             .hamburger {
                 position: relative;
                 display: block;
-                width: 35px;
+                width: 50px;
                 cursor: pointer;
                 appearance: none;
                 background: none;
@@ -118,12 +119,13 @@ const TopNav = () => {
             }
             .mobile-nav.is-active {
                 height: fit-content;
-                width: 100vw;
+                width: 121vw;
                 background: white;
                 position: fixed;
                 left: 0%;
                 padding-top: 100px;
                 padding-bottom: 100px;
+                font-size: 30px;
             }
             .mobile-nav a {
                 display: block;
