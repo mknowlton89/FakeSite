@@ -24,7 +24,11 @@ export default function Home({videos}: Props) {
 
       <main className='main'>
         <TopNav />
-        <Hero />
+        <Hero
+          headline="Vimeo Staff Picks"
+          subhead="View a hand curated list of the top films, according to Vimeo film experts."
+          button={true}
+          height="700px"/>
         <VideoTable videos={videos}/>
         <Footer />
       </main>

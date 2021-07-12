@@ -1,16 +1,23 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const Hero = () => {
+type Props = {
+    headline: string;
+    subhead?: string;
+    button?: boolean;
+    height: string;
+}
+
+const Hero = ({headline, subhead, button, height}:Props) => {
 
     const router = useRouter()
 
     return (
         <div className='hero'>
             <div className='hero-text'>
-                <h1>Vimeo&apos;s Top Charts</h1>
-                <p>Want to be the wokest bro in your squad? Check out which videos are hot and which videos are not. #WokeFam</p>
-                <button type="button" onClick={() => router.push('#videos')}>Browse Top Videos</button>
+                <h1>{headline}</h1>
+                <p>{subhead}</p>
+                {button && <button type="button" onClick={() => router.push('#videos')}>Browse Top Videos</button>}
             </div>
             <style jsx>{`
                 .hero h1 {
@@ -25,7 +32,7 @@ const Hero = () => {
                     background-size: cover;
                     text-align: center;
                     position: relative;
-                    height: 700px;
+                    height: ${height};
                     display: flex;
                     flex-direction: column;
                     justify-content: center;

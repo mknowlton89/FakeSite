@@ -5,7 +5,7 @@ import helpers from '../../../utils/helpers'
 import Head from 'next/head'
 import TopNav from '../../../components/TopNav'
 import Footer from '../../../components/Footer'
-import VideoHero from '../../../components/VideoHero'
+import Hero from '../../../components/Hero'
 
 const VideoPage = () => {
 
@@ -70,9 +70,13 @@ const VideoPage = () => {
                         <h3>Loading</h3>
                     </div> :
                     <>
-                    <VideoHero title={videoData.name}/>
+                    <Hero
+                        headline={videoData.name}
+                        button={false}
+                        height="500px"/>
                     <div id="video-wrapper">
                         <iframe className="i-frame-container" src={getURLSource()} width={videoWidth} height={videoHeight} allow="autoplay; fullscreen; picture-in-picture" title={videoData.name}></iframe>
+                        <h2>Description:</h2>
                         <p>{videoData.description.replace(/<[^>]*>?/gm, '')}</p>
                     </div>
                     </>}
