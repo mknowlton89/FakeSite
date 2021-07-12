@@ -28,7 +28,7 @@ const Hero = () => {
                     background-size: cover;
                     text-align: center;
                     position: relative;
-                    width: 100vw;
+                    // width: 100vw;
                     height: 700px;
                     display: flex;
                     flex-direction: column;
@@ -55,16 +55,16 @@ const Hero = () => {
                 button:hover {
                     cursor: pointer;
                 }
-                @media only screen and (max-width: 600px) {
-                    .hero-text {
-                        width: 160vw;
-                    }
-                  }
-                  @media only screen and (max-width: 437px) {
-                    .hero-text {
-                        width: 160vw;
-                    }
-                  }
+                // @media only screen and (max-width: 600px) {
+                //     .hero-text {
+                //         width: 160vw;
+                //     }
+                //   }
+                //   @media only screen and (max-width: 437px) {
+                //     .hero-text {
+                //         width: 160vw;
+                //     }
+                //   }
             `}</style>
         </div>
     )

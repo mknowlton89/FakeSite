@@ -20,6 +20,10 @@ a:hover {
 }
 
 /* * {
+  outline: 1px solid #f00 !important;
+} */
+
+/* * {
   box-sizing: border-box;
 } */
 

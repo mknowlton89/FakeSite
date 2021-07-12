@@ -30,7 +30,7 @@ const VideoHero = ({ title }: Props) => {
                     background-size: cover;
                     text-align: center;
                     position: relative;
-                    width: 100vw;
+                    // width: 100vw;
                     height: 400px;
                     display: flex;
                     flex-direction: column;
@@ -43,16 +43,16 @@ const VideoHero = ({ title }: Props) => {
                     line-height: 28px;
                     color: #EDEDED;
                 }
-                @media only screen and (max-width: 600px) {
-                    .video-hero-text {
-                        width: 160vw;
-                    }
-                  }
-                  @media only screen and (max-width: 437px) {
-                    .video-hero-text {
-                        width: 160vw;
-                    }
-                  }
+                // @media only screen and (max-width: 600px) {
+                //     .video-hero-text {
+                //         width: 160vw;
+                //     }
+                //   }
+                //   @media only screen and (max-width: 437px) {
+                //     .video-hero-text {
+                //         width: 160vw;
+                //     }
+                //   }
             `}</style>
         </div>
     )

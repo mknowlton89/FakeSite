@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import api from '../../../utils/api'
+import helpers from '../../../utils/helpers'
 import Head from 'next/head'
 import TopNav from '../../../components/TopNav'
 import Footer from '../../../components/Footer'
@@ -8,40 +9,59 @@ import VideoHero from '../../../components/VideoHero'
 
 const videoPage = () => {
 
+    let size = helpers.useWindowSize();
+
+    const [videoWidth, setVideoWidth]: any = useState()
+    const [videoHeight, setVideoHeight]: any = useState()
     const [videoData, setVideoData]: any = useState()
 
     const router = useRouter()
+
     let videoId: any = router.query.id
 
     const getURLSource = () => {
-        // alert("Get URL Source was called")
         let urlArray = videoData.uri.split('/')
-        console.log(urlArray);
         return `https://player.vimeo.com/video/${urlArray[2]}`;
     }
 
-    const calculateWidth = () => {
-        let screenWidth = window.innerWidth
-        let videoWidth = videoData.width
+    // const calculateWidth = () => {
+    //     let screenWidth = size.width
+    //     let videoWidth = videoData.width
 
-        if (screenWidth > videoWidth){
-            return videoWidth
-        } else {
-            videoWidth = screenWidth * .8
-            return videoWidth;
+    //     if (screenWidth){
+    //         if (screenWidth > videoWidth){
+    //             return videoWidth
+    //         } else {
+    //             videoWidth = screenWidth * .8
+    //             return videoWidth;
+    //         }
+    //     }
+    // }
+
+    // const calculateHeight = () => {
+    //     // let screenHeight = size.height
+    //     // We need to calculate the aspect ratio of the video
+    //     if (videoWidth) {
+    //         const videoAspectRatio = videoData.width / videoData.height
+
+    //         let videoHeight = videoWidth / videoAspectRatio;
+
+    //         return videoHeight;
+    //     }
+
+
+    const calculateVideoSize = () => {
+
+        if (size.width && videoData){
+            if (size.width > videoData.width){
+                setVideoWidth(videoData.width)
+            } else {
+                setVideoWidth(size.width * .8)
+            }
         }
-    }
 
-    const calculateHeight = () => {
-        let screenHeight = window.innerHeight
-        let videoHeight = videoData.Height
-
-        if (screenHeight > videoHeight){
-            return videoHeight
-        } else {
-            videoHeight = screenHeight * .8
-            return videoHeight;
-        }
+        const videoAspectRatio = videoData.width / videoData.height
+            setVideoHeight(videoWidth / videoAspectRatio)
     }
 
     useEffect(() => {
@@ -52,7 +72,15 @@ const videoPage = () => {
         }
     }, [videoId]);
 
+    useEffect(() => {
+        if (videoData && size){
+            calculateVideoSize()
+        }
+    }, [size, videoData, videoWidth])
+
     console.log(videoData)
+
+
 
     return (
         <div>
@@ -67,15 +95,14 @@ const videoPage = () => {
             </Head>
             <main className='main'>
                 <TopNav />
-                    {!videoData ?
+                    {!videoData && !videoWidth && !videoHeight ?
                     <div className="loading-state">
                         <h3>Loading</h3>
                     </div> :
                     <>
                     <VideoHero title={videoData.name}/>
                     <div id="video-wrapper">
-                        <iframe className="i-frame-container" src={getURLSource()} width={calculateWidth()} height={calculateHeight()} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
-                        {/* <iframe src="https://player.vimeo.com/video/568430412" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Aerial Sheep Herding in Yokneam"></iframe> */}
+                        <iframe className="i-frame-container" src={getURLSource()} width={videoWidth} height={videoHeight} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
                         <p>{videoData.description.replace(/<[^>]*>?/gm, '')}</p>
                     </div>
                     </>}

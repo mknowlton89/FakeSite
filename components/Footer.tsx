@@ -22,7 +22,7 @@ const Footer = () => {
 
           <hr></hr>
           <div className="footer-legal">
-            <div>
+            <div className="footer-logo-container">
               <Image src="/logo.png" alt="Vercel Logo" width={40} height={40}/>
             </div>
             <div>
@@ -65,6 +65,28 @@ const Footer = () => {
           .footer-legal a {
             padding-left: 20px;
           }
+          @media only screen and (max-width: 700px) {
+                    .footer-quick-link-container {
+                         flex-direction: column;
+                         align-items: center;
+                         text-align: center;
+                    }
+                    .footer-quick-links h4{
+                      padding-right: 0px;
+                    }
+                    .footer-legal {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    .footer-legal a {
+                      padding: 0px 10px 0px 10px;
+                      margin-bottom: 10px;
+                      text-align: center;
+                    }
+                    .footer-logo-container {
+                      padding-top: 20px;
+                    }
+                   }
         }`}</style>
       </footer>
     )
