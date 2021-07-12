@@ -7,7 +7,7 @@ import TopNav from '../../../components/TopNav'
 import Footer from '../../../components/Footer'
 import VideoHero from '../../../components/VideoHero'
 
-const videoPage = () => {
+const VideoPage = () => {
 
     let size = helpers.useWindowSize();
 
@@ -102,4 +102,4 @@ const videoPage = () => {
     )
 }
 
-export default videoPage
+export default VideoPage
