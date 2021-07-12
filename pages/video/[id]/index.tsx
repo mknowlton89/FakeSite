@@ -20,6 +20,30 @@ const videoPage = () => {
         return `https://player.vimeo.com/video/${urlArray[2]}`;
     }
 
+    const calculateWidth = () => {
+        let screenWidth = window.innerWidth
+        let videoWidth = videoData.width
+
+        if (screenWidth > videoWidth){
+            return videoWidth
+        } else {
+            videoWidth = screenWidth * .8
+            return videoWidth;
+        }
+    }
+
+    const calculateHeight = () => {
+        let screenHeight = window.innerHeight
+        let videoHeight = videoData.Height
+
+        if (screenHeight > videoHeight){
+            return videoHeight
+        } else {
+            videoHeight = screenHeight * .8
+            return videoHeight;
+        }
+    }
+
     useEffect(() => {
         if (videoId) {
             api.getVideoDetailsById(videoId.toString())
@@ -50,7 +74,7 @@ const videoPage = () => {
                     <>
                     <VideoHero title={videoData.name}/>
                     <div id="video-wrapper">
-                        <iframe className="i-frame-container" src={getURLSource()} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
+                        <iframe className="i-frame-container" src={getURLSource()} width={calculateWidth()} height={calculateHeight()} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={videoData.name}></iframe>
                         {/* <iframe src="https://player.vimeo.com/video/568430412" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Aerial Sheep Herding in Yokneam"></iframe> */}
                         <p>{videoData.description.replace(/<[^>]*>?/gm, '')}</p>
                     </div>
