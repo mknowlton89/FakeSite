@@ -26,7 +26,7 @@ const Hero = ({headline, subhead, button, height}:Props) => {
                     color: #fff;
                     font-weight: 300;
                 }
-                
+
                 .hero-text {
                     background: url('/hero-image.png') center;
                     background-repeat: no-repeat;
@@ -59,6 +59,10 @@ const Hero = ({headline, subhead, button, height}:Props) => {
 
                 button:hover {
                     cursor: pointer;
+                }
+
+                p, h1, button {
+                    margin: 11px 0px 11px 0px;
                 }
             `}</style>
         </div>
