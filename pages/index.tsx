@@ -45,6 +45,7 @@ export const getStaticProps = async () => {
   return {
       props: {
           videos
-      }
+      },
+      revalidate: 604800, // re-generates a static site each week.
   }
 }
